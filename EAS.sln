@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EAS", "EAS\EAS.csproj", "{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {341CFD37-F7AB-41C9-8545-664570743E2F}
+	EndGlobalSection
+EndGlobal
