@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EAS", "EAS\EAS.csproj", "{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EASLib", "EASLib\EASLib.csproj", "{AA8139C6-44A4-4192-91AA-91FDA72A9ECF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EASTest", "EASTest\EASTest.csproj", "{4990A8A5-29AD-44FD-AD84-B642D34468FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B138859B-9EEF-43CA-A0B2-C0D3D8EDBFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8139C6-44A4-4192-91AA-91FDA72A9ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8139C6-44A4-4192-91AA-91FDA72A9ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8139C6-44A4-4192-91AA-91FDA72A9ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8139C6-44A4-4192-91AA-91FDA72A9ECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4990A8A5-29AD-44FD-AD84-B642D34468FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4990A8A5-29AD-44FD-AD84-B642D34468FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4990A8A5-29AD-44FD-AD84-B642D34468FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4990A8A5-29AD-44FD-AD84-B642D34468FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

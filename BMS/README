@@ -1,0 +1,34 @@
+These files are messages from the game Black Mesa
+encoded with the valid SAME headers and SAME EOM bursts.
+
+WARNING WARNING WARNING
+THESE SOUND FILES CONTAIN VALID SAME HEADER DATA AND MAY TRIGGER
+AND MAKE VARIOUS EAS HARDWARE THINK THAT SOMETHING REALLY HAPPENED
+DO NOT UNDER ANY CIRCUMSTANCES TRANSMIT THESE SOUND FILES ANYWHERE
+NEAR THE UNITED STATES OF AMERICA AS DOING SO IS ILLEGAL AND MAY
+LEAD TO VARIOUS LEGAL CONSEQUENCES FOR YOU
+
+This one is just to be sure that if someone stupid enough tries
+to transmit those files, I am not getting arrested:
+THE SOUND FILES IN THIS SUBDIRECTORY ARE PROVIDED "AS IS", WITHOUT
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
+THE SOUND FILES OR THE USE OR OTHER DEALINGS IN THE SOUND FILES.
+
+The original game features three EAS messages throughout
+the gamplay as a quick look at the events happening outside
+of the research facility. However those messages have SAME
+headers that do not reflect the situation (RWS - Required
+Weekly Test for Rhode Island, obviously not an EVI - Evacuation
+Immediate for New Mexico) as well as lacking the EOM bursts (which,
+to my understanding actually is dangerous for some EAS equipment IRL).
+
+So I decided to use my encoder to generate valid EAS messages
+for those in-game moments.
+
+If you, the reader of this are a level designer @ Crowbar Collective,
+feel free to use those as a replacement for existing sound files;
+I think it would be a nifty easter egg to have valid SAME headers there.
