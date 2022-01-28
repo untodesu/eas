@@ -39,13 +39,12 @@ namespace EAS.Types
             readPosition = 0;
         }
 
-        public void WriteAFSK(byte[] data, float baud, float mark, float space, byte mask = 0xFF)
+        public void WriteAFSK(byte[] data, float baud, float mark, float space)
         {
             float bitDuration = 1.0f / baud;
             for(int i = 0; i < data.Length; i++) {
-                byte value = (byte)(data[i] & mask);
                 for(int j = 0; j < 8; j++) {
-                    WriteTone(bitDuration, (((value >> j) & 1) != 0) ? mark : space );
+                    WriteTone(bitDuration, (((data[i] >> j) & 1) != 0) ? mark : space );
                 }
             }
         }
@@ -70,6 +69,17 @@ namespace EAS.Types
             int durationSamples = (int)(SampleRate * duration);
             for(int i = 0; i < durationSamples; i++) {
                 Samples.Add(0.0f);
+            }
+        }
+
+        public void WriteWaves(IWaveProvider provider)
+        {
+            using(MediaFoundationResampler resampler = new MediaFoundationResampler(provider, WaveFormat)) {
+                float[] buffer = new float[128];
+                ISampleProvider sampleProvider = resampler.ToSampleProvider();
+                while(sampleProvider.Read(buffer, 0, buffer.Length) != 0) {
+                    Samples.AddRange(buffer);
+                }
             }
         }
     }

@@ -14,12 +14,19 @@ namespace EAS
         {
             SampleBuffer buffer = new SampleBuffer(96000);
 
-            SameHeader header = new SameHeader(OriginatorCode.EASParticipant, EventCode.RequiredMonthlyTest, new TimeSpan(0, 15, 0), "WABC/FM");
+            SameHeader header = new SameHeader(OriginatorCode.EASParticipant,
+                EventCode.CivilEmergencyMessage, new TimeSpan(1, 20, 0), "AMONG/US");
+
+            header.Locations.Add(new LocationCode(12, 0));
             header.Locations.Add(new LocationCode(35, 0));
             header.Locations.Add(new LocationCode(48, 0));
 
             SameEncoder.WriteHeader(buffer, header);
             SameEncoder.WriteAttentionSignal(buffer, AttentionSignal.BroadcastRadioOrTV);
+            using(Mp3FileReader reader = new Mp3FileReader("tts.mp3")) {
+                buffer.WriteWaves(reader);
+                buffer.WriteSilence(1.0f);
+            }
             SameEncoder.WriteEOM(buffer);
 
             Console.WriteLine(header.ToString());

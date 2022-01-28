@@ -25,8 +25,8 @@ namespace EAS.Types.Same
         {
             byte[] headerData = Encoding.ASCII.GetBytes(header.ToString());
             for(int i = 0; i < bursts; i++) {
-                buffer.WriteAFSK(Preamble, BaudRate, MarkFrequency, SpaceFrequency, 0x7F);
-                buffer.WriteAFSK(headerData, BaudRate, MarkFrequency, SpaceFrequency, 0x7F);
+                buffer.WriteAFSK(Preamble, BaudRate, MarkFrequency, SpaceFrequency);
+                buffer.WriteAFSK(headerData, BaudRate, MarkFrequency, SpaceFrequency);
                 buffer.WriteSilence(1.0f);
             }
         }
@@ -34,8 +34,8 @@ namespace EAS.Types.Same
         public static void WriteEOM(SampleBuffer buffer, int bursts = 3)
         {
             for(int i = 0; i < bursts; i++) {
-                buffer.WriteAFSK(Preamble, BaudRate, MarkFrequency, SpaceFrequency, 0x7F);
-                buffer.WriteAFSK(EOM, BaudRate, MarkFrequency, SpaceFrequency, 0x7F);
+                buffer.WriteAFSK(Preamble, BaudRate, MarkFrequency, SpaceFrequency);
+                buffer.WriteAFSK(EOM, BaudRate, MarkFrequency, SpaceFrequency);
                 buffer.WriteSilence(1.0f);
             }
         }
