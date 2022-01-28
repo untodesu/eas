@@ -14,12 +14,16 @@ namespace EAS
         {
             SampleBuffer buffer = new SampleBuffer(96000);
 
-            SameHeader header = new SameHeader(OriginatorCode.EASParticipant,
-                EventCode.CivilEmergencyMessage, new TimeSpan(1, 20, 0), "AMONG/US");
+            SameHeader header = new SameHeader(
+                OriginatorCode.PrimaryEntryPoint, EventCode.CivilEmergencyMessage, new TimeSpan(0, 15, 0), "RICK/AST");
 
-            header.Locations.Add(new LocationCode(12, 0));
-            header.Locations.Add(new LocationCode(35, 0));
-            header.Locations.Add(new LocationCode(48, 0));
+            // All US
+            header.Locations.Add(new LocationCode(0, 0));
+
+            // Florida, New Mexico and Texas
+            //header.Locations.Add(new LocationCode(12, 0));
+            //header.Locations.Add(new LocationCode(35, 0));
+            //header.Locations.Add(new LocationCode(48, 0));
 
             SameEncoder.WriteHeader(buffer, header);
             SameEncoder.WriteAttentionSignal(buffer, AttentionSignal.BroadcastRadioOrTV);
